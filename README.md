@@ -1,3 +1,3 @@
 ### TODO
 
-- [] Certificate instalation
+- [ ] Certificate instalation
