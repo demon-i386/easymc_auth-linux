@@ -7,8 +7,8 @@ def main():
 		f.write(f"{CLIENTSETTINGS_DATA['authServer']} {SESSIONSERVER}\n")
 		f.write(f"{CLIENTSETTINGS_DATA['authServer']} {AUTHSERVER}\n")
 		f.close()
-	except:
-		print("Error occurred")
+	except PermissionError:
+		print("[!] Cant write to /etc/hosts, run this script as root")
 		exit()
 
 	data = {"token": get_token}
