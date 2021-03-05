@@ -3,7 +3,7 @@ import requests, json, os, pwd, argparse
 
 def main():
 	try:
-		f = open(f"/etc/hosts", "w")
+		f = open(f"/etc/hosts", "a")
 		f.write(f"{CLIENTSETTINGS_DATA['authServer']} {SESSIONSERVER}\n")
 		f.write(f"{CLIENTSETTINGS_DATA['authServer']} {AUTHSERVER}\n")
 		f.close()
