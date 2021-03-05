@@ -55,8 +55,6 @@ if __name__ == "__main__":
 	AUTHSERVER = "authserver.mojang.com";
 	SESSIONSERVER = "sessionserver.mojang.com";
 	CLIENTSETTINGS_DATA = requests.get(API_URL+"/client/settings").json()
-	os.environ['HOSTALIASES']= f"/home/{pwd.getpwuid(os.getuid())[0]}/.hosts"
-
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-t', '--token', help='Account token for easymc')
 	args = parser.parse_args()
